@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendTrail - Smart Expense Tracking</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .feature {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .cta {
+            background: #667eea;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .cta h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .cta p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .download-badge {
+            display: inline-block;
+            background: white;
+            color: #333;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        .download-badge:hover {
+            transform: translateY(-3px);
+        }
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📊 SpendTrail</h1>
+        <p>Effortless expense tracking powered by AI</p>
+    </div>
+
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5em;">Smart Features</h2>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="icon">📱</div>
+                <h3>Automatic SMS Parsing</h3>
+                <p>Automatically captures transactions from bank SMS messages</p>
+            </div>
+            
+            <div class="feature">
+                <div class="icon">📧</div>
+                <h3>Gmail Integration</h3>
+                <p>Parse transaction emails from your Gmail account with one-click authorization</p>
+            </div>
+            
+            <div class="feature">
+                <div class="icon">🔔</div>
+                <h3>Smart Notifications</h3>
+                <p>Get notified about detected transactions and approve them with a tap</p>
+            </div>
+            
+            <div class="feature">
+                <div class="icon">🤖</div>
+                <h3>AI-Powered Learning</h3>
+                <p>System learns from your corrections to improve accuracy over time</p>
+            </div>
+            
+            <div class="feature">
+                <div class="icon">📈</div>
+                <h3>Visual Reports</h3>
+                <p>Beautiful charts and insights into your spending patterns</p>
+            </div>
+            
+            <div class="feature">
+                <div class="icon">🔒</div>
+                <h3>Secure & Private</h3>
+                <p>Your data is encrypted and stored securely. We never share your information.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta">
+        <h2>Download SpendTrail Today</h2>
+        <p>Available on Android</p>
+        <a href="#" class="download-badge">📱 Download on Google Play</a>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 SpendTrail. All rights reserved.</p>
+        <div style="margin-top: 20px;">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="mailto:support@spendtrail.app">Contact Us</a>
+        </div>
+    </div>
+</body>
+</html>

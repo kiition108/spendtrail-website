@@ -6,16 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>SpendTrail - Smart Expense Tracking App | Automatic Transaction Detection</title>
+    <title>SpendTrail - AI-Powered Smart Expense Tracking App</title>
     <meta name="title" content="SpendTrail - Smart Expense Tracking App | Automatic Transaction Detection">
     <meta name="description"
-        content="Effortless expense tracking powered by AI. Automatically capture transactions from SMS and Gmail, get smart notifications, and visualize your spending with beautiful reports.">
+        content="Effortless expense tracking powered by AI. Automatically capture transactions from SMS and Gmail, split bills with friends, and visualize your spending with premium insights.">
     <meta name="keywords"
-        content="expense tracking, budget app, spending tracker, money management, transaction parser, SMS banking, Gmail integration, personal finance, AI expense tracker">
-    <meta name="author" content="SpendTrail">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <link rel="canonical" href="https://spendtrail.app">
+        content="expense tracking, group expense, splitwise alternative, money manager, SMS banking, Gmail finance integration, spendtrail app">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -24,19 +20,10 @@
     <meta property="og:description"
         content="Effortless expense tracking powered by AI. Automatically capture transactions from SMS and Gmail.">
     <meta property="og:image" content="https://spendtrail.app/icon-512.png">
-    <meta property="og:site_name" content="SpendTrail">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://spendtrail.app/">
-    <meta property="twitter:title" content="SpendTrail - Smart Expense Tracking App">
-    <meta property="twitter:description"
-        content="Effortless expense tracking powered by AI. Automatically capture transactions from SMS and Gmail.">
-    <meta property="twitter:image" content="https://spendtrail.app/icon-512.png">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="icon-512.png">
+    <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#667eea">
 
@@ -52,199 +39,125 @@
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
-      },
-      "description": "Smart expense tracking app with automatic transaction detection from SMS and Gmail",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "1"
-      },
-      "screenshot": "https://spendtrail.app/icon-512.png"
+      }
     }
     </script>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-
-        .header p {
-            font-size: 1.3em;
-            opacity: 0.9;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .feature {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .feature h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-
-        .cta {
-            background: #667eea;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .cta h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .cta p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-
-        .download-badge {
-            display: inline-block;
-            background: white;
-            color: #333;
-            padding: 15px 40px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 10px;
-            transition: transform 0.2s;
-        }
-
-        .download-badge:hover {
-            transform: translateY(-3px);
-        }
-
-        .footer {
-            background: #2d3748;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .footer a {
-            color: #667eea;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        .icon {
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="header">
-        <h1>📊 SpendTrail</h1>
-        <p>Effortless expense tracking powered by AI</p>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="animate">Track Every Penny,<br>Everywhere.</h1>
+            <p class="animate">Automate your finances with SpendTrail. The AI-powered app that captures expenses from
+                SMS and Gmail so you don't have to.</p>
+            <div class="animate">
+                <a href="#download" class="btn">Get Started Free</a>
+                <a href="#features" class="btn btn-white">Explore Features</a>
+            </div>
+        </div>
+    </section>
 
     <div class="container">
-        <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5em;">Smart Features</h2>
+        <!-- Main Stats / Mockup Section -->
+        <section class="mockup-section">
+            <div class="mockup-content animate">
+                <h2 style="color: var(--primary);">Real-time Financial Clarity.</h2>
+                <p>SpendTrail doesn't just list transactions; it provides a narrative. See where your money goes with 3D
+                    charts, category breakdowns, and weekly trends.</p>
+                <br>
+                <p>✨ <strong>New:</strong> Join groups instantly via deep links and scan SpendTrail IDs from your
+                    gallery.</p>
+            </div>
+            <div class="mockup-image animate">
+                <img src="spendtrail_app_mockup_feature.png" alt="SpendTrail App Dashboard">
+            </div>
+        </section>
 
-        <div class="features">
-            <div class="feature">
-                <div class="icon">📱</div>
-                <h3>Automatic SMS Parsing</h3>
-                <p>Automatically captures transactions from bank SMS messages</p>
+        <!-- Features Grid -->
+        <section id="features">
+            <div class="section-title">
+                <h2>Why Choose SpendTrail?</h2>
+                <p>The smartest way to manage personal and group finances.</p>
             </div>
 
-            <div class="feature">
-                <div class="icon">📧</div>
-                <h3>Gmail Integration</h3>
-                <p>Parse transaction emails from your Gmail account with one-click authorization</p>
-            </div>
+            <div class="features">
+                <div class="feature-card">
+                    <span class="feature-icon">🤖</span>
+                    <h3>Auto-Magic Capture</h3>
+                    <p>No more manual entry. Our AI detects banking SMS and Gmail receipts to log transactions
+                        instantly.</p>
+                </div>
 
-            <div class="feature">
-                <div class="icon">🔔</div>
-                <h3>Smart Notifications</h3>
-                <p>Get notified about detected transactions and approve them with a tap</p>
-            </div>
+                <div class="feature-card">
+                    <span class="feature-icon">👥</span>
+                    <h3>Bill Splitting v2.0</h3>
+                    <p>Create groups for trips, rent, or dinner. Settle balances easily with friends. Now with
+                        <strong>QR Scan from Gallery</strong> support.
+                    </p>
+                </div>
 
-            <div class="feature">
-                <div class="icon">🤖</div>
-                <h3>AI-Powered Learning</h3>
-                <p>System learns from your corrections to improve accuracy over time</p>
-            </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📊</span>
+                    <h3>Premium Insights</h3>
+                    <p>Understand your spending behavior with beautiful 3D charts and automated weekly reports.</p>
+                </div>
 
-            <div class="feature">
-                <div class="icon">📈</div>
-                <h3>Visual Reports</h3>
-                <p>Beautiful charts and insights into your spending patterns</p>
-            </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔒</span>
+                    <h3>Bank-Grade Security</h3>
+                    <p>Your data is yours. End-to-end encryption and secure storage ensure your financial privacy is
+                        never compromised.</p>
+                </div>
 
-            <div class="feature">
-                <div class="icon">👥</div>
-                <h3>Bill Splitting & Groups</h3>
-                <p>Easy group expenses, settlements, and shared balances with friends</p>
-            </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📍</span>
+                    <h3>Location Intelligence</h3>
+                    <p>Automatically geotag your spends. See exactly where you spent your money on an interactive map.
+                    </p>
+                </div>
 
-            <div class="feature">
-                <div class="icon">🔒</div>
-                <h3>Secure & Private</h3>
-                <p>Your data is encrypted and stored securely. We never share your information.</p>
+                <div class="feature-card">
+                    <span class="feature-icon">🔗</span>
+                    <h3>Instant Join Links</h3>
+                    <p>Share a simple link to invite friends to a group. One tap opens the app and joins them
+                        automatically.</p>
+                </div>
             </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="download" class="cta-box">
+            <h2>Start Your Financial Trail</h2>
+            <p>Join thousands of users managing their money the smart way.</p>
+            <a href="#" class="btn btn-white">📱 Download for Android</a>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">Coming soon to iOS</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h2 style="font-weight: 800; color: var(--primary);">SpendTrail</h2>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="mailto:support@spendtrail.app">Support</a>
         </div>
-    </div>
+        <p>&copy; 2026 SpendTrail Finance AI. All rights reserved.</p>
+    </footer>
 
-    <div class="cta">
-        <h2>Download SpendTrail Today</h2>
-        <p>Available on Android</p>
-        <a href="#" class="download-badge">📱 Download on Google Play</a>
-    </div>
+    <script>
+        // Simple Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
 
-    <div class="footer">
-        <p>&copy; 2026 SpendTrail. All rights reserved.</p>
-        <div style="margin-top: 20px;">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="mailto:support@spendtrail.app">Contact Us</a>
-        </div>
-    </div>
+        document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+    </script>
 </body>
 
 </html>

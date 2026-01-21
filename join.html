@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Join on SpendTrail | Smart Expense Tracking</title>
+    <meta name="title" content="Join on SpendTrail | Smart Expense Tracking">
+    <meta name="description" content="Add friends and join groups on SpendTrail. Effortless expense tracking powered by AI.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../icon-512.png">
+    <meta name="theme-color" content="#667eea">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f0f2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+        .logo {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #1a202c;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+        }
+        p {
+            color: #4a5568;
+            margin-bottom: 30px;
+        }
+        .code-display {
+            background: #f7fafc;
+            padding: 12px;
+            border-radius: 12px;
+            font-family: monospace;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #667eea;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            display: inline-block;
+            border: 1px dashed #cbd5e0;
+        }
+        .btn {
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+        }
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+            box-shadow: none;
+        }
+        .btn-secondary:hover {
+            background: #f7fafc;
+        }
+        .footer-note {
+            font-size: 0.9em;
+            color: #718096;
+            margin-top: 20px;
+        }
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo">📊</div>
+        <h1>Join on SpendTrail</h1>
+        
+        <div id="loading">
+            <div class="loading-spinner"></div>
+            <p>Attempting to open SpendTrail app...</p>
+        </div>
+
+        <div id="content" style="display: none;">
+            <p>You've been invited to join SpendTrail! Use the code below or click the button to open the app.</p>
+            <div class="code-display" id="user-code">-------</div>
+            
+            <a href="#" id="open-app-btn" class="btn">Open in SpendTrail</a>
+            <a href="https://spendtrail.app" class="btn btn-secondary">Download App</a>
+            
+            <p class="footer-note">Don't have the app? Download it on the Google Play Store to get started.</p>
+        </div>
+    </div>
+
+    <script>
+        // Parse code from URL path (/join/CODE) or query param (?id=CODE)
+        function getCode() {
+            const pathParts = window.location.pathname.split('/');
+            // If path is /join/ABCDEFGH, pathParts will be ["", "join", "ABCDEFGH"]
+            let code = pathParts[pathParts.length - 1];
+            
+            // If the last part is empty or "join", check query params
+            if (!code || code === 'join' || code === 'join.html') {
+                const urlParams = new URLSearchParams(window.location.search);
+                code = urlParams.get('id') || urlParams.get('code');
+            }
+            
+            return code ? code.toUpperCase() : null;
+        }
+
+        const code = getCode();
+        if (code) {
+            document.getElementById('user-code').textContent = code;
+            const appUrl = `spendtrail://join/${code}`;
+            document.getElementById('open-app-btn').href = appUrl;
+
+            // Attempt to redirect immediately
+            window.location.href = appUrl;
+
+            // After 3 seconds, show the manual buttons if the app didn't open
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            }, 2500);
+        } else {
+            document.getElementById('loading').innerHTML = '<p>No join code found. Please check your link.</p>';
+            document.getElementById('content').style.display = 'block';
+            document.getElementById('open-app-btn').style.display = 'none';
+            document.getElementById('user-code').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

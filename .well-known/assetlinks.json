@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.spendtrail.app",
+      "sha256_cert_fingerprints": [
+        "BB:E1:94:11:45:05:FF:AD:FD:51:F3:50:05:E0:C0:37:AA:E9:40:81:A4:0A:D5:01:23:E0:FD:07:F2:7C:56:31"
+      ]
+    }
+  }
+]

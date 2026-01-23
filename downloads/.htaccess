@@ -1,0 +1,18 @@
+# Force download for APK files
+<FilesMatch "\.apk$">
+    Header set Content-Disposition "attachment"
+    Header set Content-Type "application/vnd.android.package-archive"
+</FilesMatch>
+
+# Enable GZIP compression for text files
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+</IfModule>
+
+# Cache APK files for 30 days
+<FilesMatch "\.(apk)$">
+    Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
+
+# Prevent directory browsing
+Options -Indexes
